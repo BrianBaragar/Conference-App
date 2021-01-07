@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/navHomeFragment"
+        android:name="com.brian.platziconf.View.Fragments.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment_to_scheduleFragment"
+            app:destination="@id/navHomeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/navCronogramaFragment"
+        android:name="com.brian.platziconf.View.Fragments.ScheduleFragment"
+        android:label="fragment_schedule"
+        tools:layout="@layout/fragment_schedule" >
+        <action
+            android:id="@+id/action_scheduleFragment_to_speakersFragment"
+            app:destination="@id/navCronogramaFragment" />
+        <action
+            android:id="@+id/action_navCronogramaFragment_to_cronogramaDetailFragmentDialog"
+            app:destination="@id/cronogramaDetailFragmentDialog" />
+    </fragment>
+    <fragment
+        android:id="@+id/navExpositoresFragment"
+        android:name="com.brian.platziconf.View.Fragments.SpeakersFragment"
+        android:label="fragment_speakers"
+        tools:layout="@layout/fragment_speakers" >
+        <action
+            android:id="@+id/action_speakersFragment_to_ubicationFragment"
+            app:destination="@id/navExpositoresFragment" />
+        <action
+            android:id="@+id/action_navExpositoresFragment_to_speakersDetailFragmentDialog"
+            app:destination="@id/speakersDetailFragmentDialog" />
+    </fragment>
+    <fragment
+        android:id="@+id/navMapaFragment"
+        android:name="com.brian.platziconf.View.Fragments.UbicationFragment"
+        android:label="fragment_ubication"
+        tools:layout="@layout/fragment_ubication" />
+    <dialog
+        android:id="@+id/speakersDetailFragmentDialog"
+        android:name="com.brian.platziconf.View.Fragments.SpeakerDetailFragment"
+        android:label="SpeakerDetailFragmentDialog"
+        tools:layout="@layout/fragment_speaker_detail"/>
+    <dialog
+        android:id="@+id/cronogramaDetailFragmentDialog"
+        android:name="com.brian.platziconf.View.Fragments.ScheduleDetailFragment"
+        android:label="CronogramaDetailFragmentDialog"
+        tools:layout="@layout/fragment_schedule_detail"/>
+    <dialog
+        android:id="@+id/ubicationDetailFragmentDialog"
+        android:name="com.brian.platziconf.View.Fragments.UbicationDetailDialogFragment"
+        android:label="UbicationDetailFragmentDialog"
+        tools:layout="@layout/fragment_ubication_detail_dialog"/>
+
+</navigation>

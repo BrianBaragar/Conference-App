@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/navHomeFragment"
+        android:title="Inicio"
+        android:icon="@drawable/ic_link"/>
+    <item
+        android:id="@+id/navCronogramaFragment"
+        android:title="Cronograma"
+        android:icon="@drawable/ic_phone"/>
+    <item
+        android:id="@+id/navExpositoresFragment"
+        android:title="Expositores"
+        android:icon="@drawable/ic_link"/>
+    <item
+        android:id="@+id/navMapaFragment"
+        android:title="Mapa"
+        android:icon="@drawable/ic_map"/>
+</menu>
